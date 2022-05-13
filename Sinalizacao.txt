@@ -1,0 +1,9 @@
+Até o momento quando jogo é iniciado é necessário escolher um nome para 
+conseguir prosseguir no jogo, a função que fica responsável por enviar a
+solicitação como o nome do jogador através do socket é sendName(dentro do client/js/client.js), que envia "new-player".
+
+Na parte do servidor a solicitação de uma nova conexão (novo jogador), é a resposta SOCKET_NEW_PLAYER,
+no momento quando o jogo é criado, se inicia também um espaço de chat global, 
+onde todas as informações que são mostradas no chat utiliza o SOCKET_CHAT_SERVER_CLIENT, quando um cliente se desconecta
+é informado pelo SOCKET_DISCONNECT, e também é possível em qualquer momento se comunicar no chat, 
+até o momento manda mensagem para todos os jogadores através do SOCKET_CHAT_CLIENT_SERVER
